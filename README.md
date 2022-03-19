@@ -1,0 +1,84 @@
+# Introduction
+
+Bowel dysfunction is difficult to define and predict. There are many bowel function scores. None work.
+
+Ultrasound is non invasive, rapid and repeatable without risk of radiation and with low risk of infectious cross contamination. 
+
+This paper details a protocol for ultrasound investigation of small bowel motility, with the results of a pilot study validating the procedure and raising questions for its future use.
+
+# Methods 
+
+## Literature review 
+
+A literature review was performed using pubmed (see supplements). It found 46 scores and no clinical utility. It also found some ultrasound material but nothing on scoring it. And the velocity of bowel motility which is to be sampled. That was found too.
+
+## Ultrasound protocol 
+
+Without requiring detailed morphometry the probe choice is less important than frequency manipulation. Phased array probes for cardiac sonography may be used as well as curvilinear probes more usually used for abdominal ultrasound. 
+
+A scan of the abdomen for other detectable abnormalities is recommended. This would entail a search for free fluid and gas, and abdominal aortic calibre pus other views as determined by the clinical situation and the operator's expertise.
+
+Initial settings are for a frequency which allows detection of the usual velocity of bowel motility, with a 10 second loop to detect motility. 
+
+Multiple locations are selected and focal or diffuse motility is quoted. 
+
+Exploratory index involving a velocity or rate change of cross sectional area is described.
+
+# Results 
+
+Table of patient scanning characteristics and image quality. 
+
+Couple of images. Cine loops for online.
+
+Table of patient characteristics and some other scores for ileus, with USS parameters. 
+
+Table of exploratory index with other predictors and outcomes. 
+
+Linear model outputs and confidence.
+
+# Discussion 
+
+Bowel dysmotility is detectable / not detectable on USS and correlates / does not correlate with other modalities. It predicts / does not predict outcomes. Further questions include whether this is teachable and whether it is accessible. 
+
+# Supplements
+
+Literature search on pubmed: 
+((("small bowel function tests") OR "small bowel function") OR "small bowel") AND ("non invasive imaging" OR "ultrasound")
+
+915 returned
+
+NOT "intussusception" 
+
+-> 808
+
+"small bowel" AND "obstruction" AND "ultrasound" NOT "intussusception"
+277 returned, 
+excluded case reports, and mechanical obstruction such as capsules, bezoar and forceps
+
+("small bowel" AND ("ileus" OR "obstruction")) AND "ultrasound" NOT "intussusception"
+returned 290
+("small bowel"[All Fields] AND "ileus"[All Fields]) AND "ultrasound"[All Fields] NOT "intussusception"[All Fields]
+returned 43
+excluded non English, case reports, mechanical causes
+
+("small bowel"[All Fields] AND ("ileus"[All Fields] OR "obstruction"[All Fields])) AND "ultrasound"[All Fields] NOT "intussusception"[All Fields] NOT "gallstone"[All Fields]
+returned 276 very similar ones
+
+("gut motility") AND ultrasound 
+returned 33 which is more like it
+
+"Ultrasound is a non-invasive tool for bowel examination, gives us the possibility to examine the intestinal contractility pattern in real time, and can be used to observe aspects of contractility which are not detected by methods relying on pressure differences only [13–17]" from 1. Volkmann HL von, Brønstad I, Gilja OH, et al. Prolonged intestinal transit and diarrhea in patients with an activating GUCY2C mutation. PLOS ONE. 2017;12(9):e0185496. doi:10.1371/journal.pone.0185496 whence also:
+
+Ultrasound
+
+The ultrasound examination was conducted with a Logic E9 ultrasound scanner (GE Healthcare, Milwaukee, USA), using a convex probe C1-5 (2.8–5.0 MHz) for abdominal overview and a linear probe 9L (8.4–9.0 MHz) for detailed bowel examination at baseline (before intake of the meal). All ultrasound measurements were performed with patients lying in a prone position. The following procedures were repeated 30, 60, 120 and 240 min after intake of the meal.
+
+Occlusive and non-occlusive contractions were counted and defined as in our previous study [10] where an occlusive contraction was defined as an active indentation of the bowel wall occluding the lumen, and a non-occlusive contraction as an active indentation in which luminal content can be observed between the anterior and dorsal wall during a contraction. We obtained one minute video recordings from the jejunum in the upper left quadrant and of the ileum in the lower right quadrant. If the lumen was not fluid-filled, we were not able to differentiate between occlusive and non-occlusive contractions, and the measurements were excluded.
+
+The number of fluid-filled small bowel loops was counted using a magnetic navigation system as shown in our previous study [10] where we used a commercially available magnetometer-based position and orientation measurement (POM) device on the ultrasound scanner which enabled tracking of the scan head in the magnetic field.
+
+Presence of small bowel segments with turbulent intraluminal and back and forth flow of content and non-occlusive contractions with no propulsive movements were defined as “snowglobe” phenomenon [10], and noted as present or not in left upper quadrant and lower right quadrant, respectively.
+
+The antrum was localized on a sagittal section in front of the superior mesenteric vein and the abdominal aorta. The image was frozen, and the area measured by tracing the circumference following the outer edge of the hypoechoic proper muscle layer using the built-in caliper of the scanner. In order to study if there were differences in the mesenteric flow in fasting subjects and in response to the meal, we examined the resistive index (RI) of the superior mesenteric artery (SMA). This reflects the circulatory resistance in the small bowel and proximal large bowel[25] It was sampled with the SMA oriented in long axis in the sagittal plane 2 cm distal to its origin to avoid turbulence. The angle between the ultrasound beam and the SMA was kept smaller than 60°. The RI was calculated according to the formula: peak-systolic velocity minus end-diastolic velocity divided by the peak-systolic velocity.
+
+
