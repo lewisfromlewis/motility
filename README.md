@@ -4,7 +4,9 @@ Bowel dysfunction is difficult to define and predict. There are many bowel funct
 
 Ultrasound is non invasive, rapid and repeatable without risk of radiation and with low risk of infectious cross contamination. 
 
-This paper details a protocol for ultrasound investigation of small bowel motility, with the results of a pilot study validating the procedure and raising questions for its future use.
+This paper details a plan of work including development and validation of a protocol from for candidate procedures, for ultrasound investigation of small bowel motility. The work starts with a cross validation of various measurement protocols in normal volunteers between two visits, with and without food, and between independent observers all blinded to the randomised feeding status of the volunteers. 
+Subsequently, a pilot study validates the chosen procedure in a population of critically ill patients at high risk for dysmotility, using test-retest, Inter observer variation, and a description of the evolution of findings over time. 
+Future work may include development and validation of a predictive process using the protocol to aid in Clinical management.ith and raising questions for its future use.
 
 # Methods 
 
