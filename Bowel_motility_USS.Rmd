@@ -61,7 +61,10 @@ Table of patient scanning characteristics and image quality.
 
 ```{r}
 library(readxl)
-motility <- readxl::read_xlsx("SmallBowelMotilityTable.xlsx") %>% select(Patient:EatB2)
+sheet1 <- readxl::read_xlsx("SmallBowelMotilityTable.xlsx") %>% select(Patient:EatB2) %>% mutate(reader= "Investigator1")
+sheet2 <- readxl::read_xlsx("SmallBowelMotilityTable.xlsx", sheet=2) %>% select(Patient:EatB2) %>% mutate(reader="Investigator2")
+
+motility <- rbind(sheet1, sheet2)
 
 ```
 
@@ -163,10 +166,13 @@ ggplot(motlong,
   geom_smooth(method="lm") + 
   geom_jitter()
 
+cor(motlong$LUQ, motlong$RLQ)
+t.test(motlong$LUQ, motlong$RLQ, paired=T)
+
 plot(motility$Fast1[motility$Position=="LUQ"], motility$Fast1[motility$Position=="RLQ"])
+```
 
-meaanmotility <- motility %>% group_by(Position) %>% select(Fast1:EatB2) %>% mean()
-
+```{r}
 ggplot(motscans,
        aes(x=Scan1, y=Scan2)) +
   geom_point() +
@@ -180,15 +186,45 @@ cor(motlong$LUQ, motlong$RLQ)
 t.test(motlong$LUQ, motlong$RLQ, paired=TRUE)
 
 
-
-motility %>%
-  select(Patient, c(Fast1, Fast2)) %>%
-  group_by(Patient) %>%
-  group_modify(~ corrr::correlate(.x))
+#motility %>%
+#  select(Patient, c(Fast1, Fast2)) %>%
+#  group_by(Patient) %>%
+#  group_modify(~ corrr::correlate(.x))
 ```
+
+
+
 ```{r}
+motres <- pivot_wider(motlonger, names_from = reader, values_from = value)
+
+ggplot(motres,
+       aes(x=Investigator1, y=Investigator2,  colour = Position)) +
+  geom_point() +
+  geom_jitter() +
+  geom_smooth(method="lm")
+
+cor(motres$Investigator1, motres$Investigator2)
+t.test(motres$Investigator1, motres$Investigator2, paired = T)
+
 ggplot(motlong, 
        aes(y=LUQ, colour=times)) +
   geom_boxplot() +
   geom_boxplot(data=motlong, aes(y=RLQ, colour=times))
+
+ggplot(motlong,
+       aes(x=LUQ, y=RLQ, colour = times)) +
+  geom_point() +
+  geom_jitter() +
+  geom_smooth()
+
+motlonger %>% filter(times %in% c("Fast1", "Fast2", "Gum1", "Gum2")) %>%  ggplot(aes(y=value, x=times, colour = times)) + geom_violin()
+
+hypoth1 <- motlonger %>% filter(times %in% c("Fast1", "Fast2", "Gum1", "Gum2", "EatA1", "EatA2", "EatB1", "EatB2")) %>% pivot_wider(names_from = times) %>% mutate(
+  Fast=rowMeans(select(., starts_with("Fast"))), 
+  Gum=rowMeans(select(., starts_with(("Gum")))),
+  EatA=rowMeans(select(., starts_with("EatA"))),
+  EatB=rowMeans(select(., starts_with("EatB"))))
+
+t.test(hypoth1$Fast, hypoth1$EatB)
+
 ```
